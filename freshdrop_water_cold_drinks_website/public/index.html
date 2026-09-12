@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshDrop | Water & Cold Drinks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="logo">Fresh<span>Drop</span></div>
+  <nav><a href="#home">Home</a><a href="#products">Products</a><a href="#order">Order</a><a href="#contact">Contact</a></nav>
+  <button class="cart-btn" onclick="showCart()">Cart (<span id="cartCount">0</span>)</button>
+</header>
+
+<section id="home" class="hero">
+  <div>
+    <p class="badge">Fresh • Cold • Delivered</p>
+    <h1>Water & Cold Drinks<br><span>At Your Doorstep</span></h1>
+    <p>Order bottled water, soft drinks and chilled beverages quickly and easily.</p>
+    <a class="primary" href="#products">Shop Now</a>
+  </div>
+  <div class="hero-card">💧🥤<strong>Fresh Drinks</strong><small>Fast local delivery</small></div>
+</section>
+
+<section id="products" class="section">
+  <div class="section-head"><div><p class="badge">Our Products</p><h2>Popular Drinks</h2></div></div>
+  <div id="productGrid" class="grid"></div>
+</section>
+
+<section id="order" class="order section">
+  <div>
+    <p class="badge">Quick Order</p>
+    <h2>Place Your Order</h2>
+    <p>Select products, enter your details and submit. The backend stores the order.</p>
+  </div>
+  <form id="orderForm">
+    <input id="name" placeholder="Your name" required>
+    <input id="phone" placeholder="Mobile number" required>
+    <textarea id="address" placeholder="Delivery address" required></textarea>
+    <button class="primary" type="submit">Place Order</button>
+  </form>
+</section>
+
+<section id="contact" class="section contact">
+  <h2>Contact</h2><p>Phone: +91 98765 43210</p><p>Email: hello@freshdrop.local</p>
+</section>
+
+<footer>© 2026 FreshDrop. Water & Cold Drinks Business.</footer>
+<div id="toast" class="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
