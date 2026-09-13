@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel - FreshDrop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">💧 FreshDrop Admin</div>
+  <nav><a href="index.html">Customer Website</a></nav>
+</header>
+
+<div id="loginBox" class="auth-card">
+  <h1>Admin Login</h1>
+  <p>Demo login: <b>admin</b> / <b>1234</b></p>
+  <input id="adminUser" placeholder="Username">
+  <input id="adminPass" type="password" placeholder="Password">
+  <button class="btn" onclick="adminLogin()">Login</button>
+  <p id="adminMsg"></p>
+</div>
+
+<main id="dashboard" class="container hidden">
+  <div class="section-head">
+    <h1>Admin Dashboard</h1>
+    <button class="btn danger" onclick="logout()">Logout</button>
+  </div>
+  <div class="stats">
+    <div><b id="productCount">0</b><span>Products</span></div>
+    <div><b id="stockCount">0</b><span>Total Stock</span></div>
+    <div><b id="orderCount">0</b><span>Orders</span></div>
+    <div><b id="salesCount">₹0</b><span>Sales</span></div>
+  </div>
+
+  <section class="panel">
+    <h2>Add / Update Product Stock</h2>
+    <input id="pName" placeholder="Product name">
+    <input id="pPrice" type="number" placeholder="Price">
+    <input id="pStock" type="number" placeholder="Stock quantity">
+    <input id="pImage" placeholder="Image URL (optional)">
+    <button class="btn" onclick="saveProduct()">Save Product</button>
+  </section>
+
+  <section class="panel">
+    <h2>Stock Management</h2>
+    <div id="stockTable"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Customer Orders</h2>
+    <div id="adminOrders"></div>
+  </section>
+</main>
+<script src="admin.js"></script>
+</body>
+</html>
